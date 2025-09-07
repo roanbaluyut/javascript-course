@@ -2,242 +2,266 @@
 'use strict';
 
 // Professional Devcelopment Environmetn Setup
-console.log('=== DEVELOPMENT ENVIRONMENT SETUP ===');
+// console.log('=== DEVELOPMENT ENVIRONMENT SETUP ===');
 
-// Create some messy code - don't worry about formatting yet
-const messyExample = function (name, age) {
-  if (age >= 18) {
-    return 'Hello ' + name + ', you are an adult';
-  } else {
-    return 'Hello ' + name + '. you are a minor';
-  }
-};
+// // Create some messy code - don't worry about formatting yet
+// const messyExample = function (name, age) {
+//   if (age >= 18) {
+//     return 'Hello ' + name + ', you are an adult';
+//   } else {
+//     return 'Hello ' + name + '. you are a minor';
+//   }
+// };
 
-console.log('Current messy code example:', messyExample('John', 25));
-console.log('Goal: Automatic formatting, auto-refresh, and typing shortcuts');
+// console.log('Current messy code example:', messyExample('John', 25));
+// console.log('Goal: Automatic formatting, auto-refresh, and typing shortcuts');
 
-//Extention Installation Test
-function testExtensions() {
-  const extensionTests = [
-    { name: 'Prettier', status: 'installed', purpose: 'code formatting' },
-    { name: 'Live Server', status: 'installed', purpose: 'auto refresh' },
-    {
-      name: 'Auto Rename Tag',
-      status: 'installed',
-      purpose: 'HTML efficiency',
-    },
-  ];
+// //Extention Installation Test
+// function testExtensions() {
+//   const extensionTests = [
+//     { name: 'Prettier', status: 'installed', purpose: 'code formatting' },
+//     { name: 'Live Server', status: 'installed', purpose: 'auto refresh' },
+//     {
+//       name: 'Auto Rename Tag',
+//       status: 'installed',
+//       purpose: 'HTML efficiency',
+//     },
+//   ];
 
-  return extensionTests;
-}
+//   return extensionTests;
+// }
 
-const extensionStatus = testExtensions();
-console.log('Extension installation status:', extensionStatus);
+// const extensionStatus = testExtensions();
+// console.log('Extension installation status:', extensionStatus);
 
-const prettierTest = {
-  firstNmae: 'Sarah',
-  lastName: 'Johnson',
-  skills: ['JavaScript', 'React', 'Node.js'],
-  isActive: true,
-};
+// const prettierTest = {
+//   firstNmae: 'Sarah',
+//   lastName: 'Johnson',
+//   skills: ['JavaScript', 'React', 'Node.js'],
+//   isActive: true,
+// };
 
-const messyFunction = function (x, y, z) {
-  if (x > 0 && y > 0) {
-    return x + y + z;
-  } else {
-    return 0;
-  }
-};
+// const messyFunction = function (x, y, z) {
+//   if (x > 0 && y > 0) {
+//     return x + y + z;
+//   } else {
+//     return 0;
+//   }
+// };
 
-const messyArrow = items => {
-  return items.map(item => {
-    return item.toUpperCase();
-  });
-};
+// const messyArrow = items => {
+//   return items.map(item => {
+//     return item.toUpperCase();
+//   });
+// };
 
-console.log(
-  'Before Prettier formatting - this code works but looks unprofessinal'
-);
+// console.log(
+//   'Before Prettier formatting - this code works but looks unprofessinal'
+// );
 
-// Exercise Code Formatting Practice
-const studentTest = {
-  firstName: 'your-name',
-  skills: ['HTML', 'CSS', 'JavacScript'],
-  experience: 'beginner',
-  goals: ['become-developer', 'build-projects'],
-};
+// // Exercise Code Formatting Practice
+// const studentTest = {
+//   firstName: 'your-name',
+//   skills: ['HTML', 'CSS', 'JavacScript'],
+//   experience: 'beginner',
+//   goals: ['become-developer', 'build-projects'],
+// };
 
-const testFunc = function (data) {
-  for (let i = 0; i < data.length; i++) {
-    console.log(data[i]);
-  }
-};
+// const testFunc = function (data) {
+//   for (let i = 0; i < data.length; i++) {
+//     console.log(data[i]);
+//   }
+// };
 
-console.log(testFunc([1, 2, 3]));
-console.log(studentTest);
+// console.log(testFunc([1, 2, 3]));
+// console.log(studentTest);
 
-// Live Server Testing
+// // Live Server Testing
 
-// Test 1: Basic live reload
-let liveServerTest = 'Initial message - change #1';
-console.log('Live Server test:', liveServerTest);
+// // Test 1: Basic live reload
+// let liveServerTest = 'Initial message - change #1';
+// console.log('Live Server test:', liveServerTest);
 
-// Test 2: Time-based updates
-const timeStamp = new Date().toLocaleTimeString();
-const updateCount = 1;
+// // Test 2: Time-based updates
+// const timeStamp = new Date().toLocaleTimeString();
+// const updateCount = 1;
 
-console.log(`Live Server update #${updateCount} at ${timeStamp}`);
+// console.log(`Live Server update #${updateCount} at ${timeStamp}`);
 
-// Test 3: Function testing
-function demonstrateLiveReload() {
-  const randomColor = ['red', 'blue', 'green', 'purple', 'orange'][
-    Math.floor(Math.random() * 5)
-  ];
-  const message = `Live Server rocks! Random color: ${randomColor}`;
+// // Test 3: Function testing
+// function demonstrateLiveReload() {
+//   const randomColor = ['red', 'blue', 'green', 'purple', 'orange'][
+//     Math.floor(Math.random() * 5)
+//   ];
+//   const message = `Live Server rocks! Random color: ${randomColor}`;
 
-  console.log(message);
-  return message;
-}
+//   console.log(message);
+//   return message;
+// }
 
-demonstrateLiveReload();
+// demonstrateLiveReload();
 
-// Student Exercise: Add this function and test live reload
-function showCurrentTime() {
-  const now = new Date().toLocaleTimeString();
-  console.log('Current time:', now);
-  return now;
-}
+// // Student Exercise: Add this function and test live reload
+// function showCurrentTime() {
+//   const now = new Date().toLocaleTimeString();
+//   console.log('Current time:', now);
+//   return now;
+// }
 
-showCurrentTime();
+// showCurrentTime();
 
-// Code Snippets Testing
+// // Code Snippets Testing
 
-// Type 'cl' then press Tab - it should expand to console.log();
-console.log('Testing snippet functionality - cl + Tab created this!');
+// // Type 'cl' then press Tab - it should expand to console.log();
+// console.log('Testing snippet functionality - cl + Tab created this!');
 
-// Type 'func' then press Tab - it should create a function template
-function testSnippets() {
-  console.log('Function created with snippet - func + Tab!');
-  return 'Snippets working perfectly!';
-}
+// // Type 'func' then press Tab - it should create a function template
+// function testSnippets() {
+//   console.log('Function created with snippet - func + Tab!');
+//   return 'Snippets working perfectly!';
+// }
 
-testSnippets();
+// testSnippets();
 
-// Type 'arrow' then press Tab - it should create an arrow function template
-const snippetTest = message => {
-  console.log(`Arrow function from snippet: ${message}`);
-  return message;
-};
+// // Type 'arrow' then press Tab - it should create an arrow function template
+// const snippetTest = message => {
+//   console.log(`Arrow function from snippet: ${message}`);
+//   return message;
+// };
 
-snippetTest('Snippets save so much typing time!');
+// snippetTest('Snippets save so much typing time!');
 
-// Environment Setup Verification
+// // Environment Setup Verification
 
-console.log('🎉 Professional Development Environment Complete!');
-console.log('✅ Prettier: Automatic code formatting');
-console.log('✅ Live Server: Automatic browser refresh');
-console.log('✅ Snippets: Fast code generation');
-console.log('✅ Extensions: Enhanced productivity');
-console.log('Ready for professional JavaScript development!');
+// console.log('🎉 Professional Development Environment Complete!');
+// console.log('✅ Prettier: Automatic code formatting');
+// console.log('✅ Live Server: Automatic browser refresh');
+// console.log('✅ Snippets: Fast code generation');
+// console.log('✅ Extensions: Enhanced productivity');
+// console.log('Ready for professional JavaScript development!');
 
-// Calculate time savings
-function calculateTimeSavings() {
-  const dailyConsoleLogs = 50;
-  const keystrokesSavedPerLog = 11; // 'console.log()' vs 'cl' + Tab
-  const dailySavings = dailyConsoleLogs * keystrokesSavedPerLog;
-  const monthlySavings = dailySavings * 22; // work days
+// // Calculate time savings
+// function calculateTimeSavings() {
+//   const dailyConsoleLogs = 50;
+//   const keystrokesSavedPerLog = 11; // 'console.log()' vs 'cl' + Tab
+//   const dailySavings = dailyConsoleLogs * keystrokesSavedPerLog;
+//   const monthlySavings = dailySavings * 22; // work days
 
-  console.log(`Daily keystrokes saved: ${dailySavings}`);
-  console.log(`Monthly keystrokes saved: ${monthlySavings}`);
+//   console.log(`Daily keystrokes saved: ${dailySavings}`);
+//   console.log(`Monthly keystrokes saved: ${monthlySavings}`);
 
-  return { daily: dailySavings, monthly: monthlySavings };
-}
+//   return { daily: dailySavings, monthly: monthlySavings };
+// }
 
-calculateTimeSavings();
+// calculateTimeSavings();
 
-// Developer Skills Hour 2 - Learning How to Code & Problem-Solving Framework
-console.log('=== HOUR 2: DEVELOPER MINDSET & PROBLEM SOLVING ===');
+// // Developer Skills Hour 2 - Learning How to Code & Problem-Solving Framework
+// console.log('=== HOUR 2: DEVELOPER MINDSET & PROBLEM SOLVING ===');
 
-/*
-The Reality of Learning to Code:
-- Most people expect: Learn syntax → Become developer
-- Actual process: Learn basics → Feel confident → Try real project → 
-  Get stuck everywhere → Question everything → Keep pushing → 
-  Gradual improvement → Success
-- Key insight: Problem-solving matters more than syntax memorization
-*/
+// /*
+// The Reality of Learning to Code:
+// - Most people expect: Learn syntax → Become developer
+// - Actual process: Learn basics → Feel confident → Try real project →
+//   Get stuck everywhere → Question everything → Keep pushing →
+//   Gradual improvement → Success
+// - Key insight: Problem-solving matters more than syntax memorization
+// */
 
-console.log(
-  'Key insight: Professional developers think systematically, not just code'
-);
+// console.log(
+//   'Key insight: Professional developers think systematically, not just code'
+// );
 
-/*
-Beginner vs Professional Problem-Solving Approaches:
+// /*
+// Beginner vs Professional Problem-Solving Approaches:
 
-BEGINNER APPROACH:
-1. Jump straight into coding
-2. Get stuck immediately  
-3. Google random solutions
-4. Copy-paste without understanding
-5. Get frustrated when nothing works
+// BEGINNER APPROACH:
+// 1. Jump straight into coding
+// 2. Get stuck immediately
+// 3. Google random solutions
+// 4. Copy-paste without understanding
+// 5. Get frustrated when nothing works
 
-PROFESSIONAL APPROACH:
-1. Understand the problem completely
-2. Break into smaller sub-problems
-3. Research specific solutions  
-4. Implement step by step
-5. Test and debug systematically
+// PROFESSIONAL APPROACH:
+// 1. Understand the problem completely
+// 2. Break into smaller sub-problems
+// 3. Research specific solutions
+// 4. Implement step by step
+// 5. Test and debug systematically
 
-Today we learn the professional approach!
-*/
+// Today we learn the professional approach!
+// */
 
-console.log('Goal: Transform from beginner to professional problem-solver');
+// console.log('Goal: Transform from beginner to professional problem-solver');
 
-// The 4-Step Problem-Solving Framework
+// // The 4-Step Problem-Solving Framework
 
-/*
-STEP 1: UNDERSTAND THE PROBLEM
-- Ask the right questions until 100% clear
-- Key questions:
-  * What exactly needs to be accomplished?
-  * What are the inputs and expected outputs?
-  * What are the edge cases and constraints?
-  * Are there any special requirements?
-*/
+// /*
+// STEP 1: UNDERSTAND THE PROBLEM
+// - Ask the right questions until 100% clear
+// - Key questions:
+//   * What exactly needs to be accomplished?
+//   * What are the inputs and expected outputs?
+//   * What are the edge cases and constraints?
+//   * Are there any special requirements?
+// */
 
-/*
-STEP 2: DIVIDE AND CONQUER  
-- Break big problem into small sub-problems
-- Strategy:
-  * Identify the main components
-  * Find dependencies between components
-  * Order sub-problems logically
-  * Ensure each piece is solvable independently
-*/
+// /*
+// STEP 2: DIVIDE AND CONQUER
+// - Break big problem into small sub-problems
+// - Strategy:
+//   * Identify the main components
+//   * Find dependencies between components
+//   * Order sub-problems logically
+//   * Ensure each piece is solvable independently
+// */
 
-/*
-STEP 3: RESEARCH SOLUTIONS
-- Find answers for sub-problems you cannot solve
-- Best sources: MDN Documentation, Stack Overflow, Google
-- Research tips: Be specific, understand before implementing
-*/
+// /*
+// STEP 3: RESEARCH SOLUTIONS
+// - Find answers for sub-problems you cannot solve
+// - Best sources: MDN Documentation, Stack Overflow, Google
+// - Research tips: Be specific, understand before implementing
+// */
 
-/*
-STEP 4: IMPLEMENT AND TEST
-- Code the solution step by step with testing
-- Start simple, test each piece, combine gradually
-*/
+// /*
+// STEP 4: IMPLEMENT AND TEST
+// - Code the solution step by step with testing
+// - Start simple, test each piece, combine gradually
+// */
 
-console.log('4-Step Framework: Understand → Divide → Research → Implement');
+// console.log('4-Step Framework: Understand → Divide → Research → Implement');
 
-// Section 2: Practical Problem-Solving Application
-// const calcTempAmplitude = function (temps) {
+// // Section 2: Practical Problem-Solving Application
+// // const calcTempAmplitude = function (temps) {
+// //   let max = temps[0];
+// //   let min = temps[0];
+
+// //   for (let i = 0; i < temps.length; i++) {
+// //     const curTemp = temps[i];
+
+// //     if (typeof curTemp !== 'number') continue;
+
+// //     if (curTemp > max) max = curTemp;
+// //     if (curTemp < min) min = curTemp;
+// //   }
+
+// //   console.log(max, min);
+// //   return max - min;
+// // };
+
+// // const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// // const amplitude = calcTempAmplitude(temperatures);
+// // console.log(amplitude);
+
+// // Section 3: Extended Challenge Practice
+// const calcTempAmplitudeNew = function (t1, t2) {
+//   const temps = t1.concat(t2);
+//   console.log(temps);
+
 //   let max = temps[0];
 //   let min = temps[0];
 
 //   for (let i = 0; i < temps.length; i++) {
 //     const curTemp = temps[i];
-
 //     if (typeof curTemp !== 'number') continue;
 
 //     if (curTemp > max) max = curTemp;
@@ -248,298 +272,389 @@ console.log('4-Step Framework: Understand → Divide → Research → Implement'
 //   return max - min;
 // };
 
-// const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
-// const amplitude = calcTempAmplitude(temperatures);
-// console.log(amplitude);
+// const array1 = [3, 5, 1];
+// const array2 = [9, 0, 5];
+// const amplitudeNew = calcTempAmplitudeNew(array1, array2);
+// console.log(amplitudeNew);
 
-// Section 3: Extended Challenge Practice
-const calcTempAmplitudeNew = function (t1, t2) {
-  const temps = t1.concat(t2);
-  console.log(temps);
+// console.log(
+//   'Problem-solving framework applied successfully to extended challenge!'
+// );
 
-  let max = temps[0];
-  let min = temps[0];
+// // Developer Skills Hour 3 - Research Skills & Debugging Fundamentals
+// console.log('=== HOUR 3: RESEARCH & DEBUGGING MASTERY');
 
-  for (let i = 0; i < temps.length; i++) {
-    const curTemp = temps[i];
-    if (typeof curTemp !== 'number') continue;
+// /*
+// Random Googling vs Strategic Research:
 
-    if (curTemp > max) max = curTemp;
-    if (curTemp < min) min = curTemp;
-  }
+// RANDOM GOOGLING (Beginner Approach):
+// - Search only when completely stuck
+// - Use vague search terms like "javascript array problem"
+// - Copy-paste first solution found
+// - Don't understand what the code does
+// - Same problems happen repeatedly
 
-  console.log(max, min);
-  return max - min;
-};
+// STRATEGIC RESEARCH (Professional Approach):
+// - Research proactively to understand concepts
+// - Use specific, targeted search terms
+// - Evaluate multiple solutions
+// - Understand solutions before implementing
+// - Build knowledge for future problems
+// */
 
-const array1 = [3, 5, 1];
-const array2 = [9, 0, 5];
-const amplitudeNew = calcTempAmplitudeNew(array1, array2);
-console.log(amplitudeNew);
+// console.log(
+//   'Goal: Master research and debugging like a professional developer'
+// );
+// console.log(
+//   'Strategic research builds lasting knowledge, not just quick fixes'
+// );
 
-console.log(
-  'Problem-solving framework applied successfully to extended challenge!'
-);
+// // Section 1: Professional Research Techniques
 
-// Developer Skills Hour 3 - Research Skills & Debugging Fundamentals
-console.log('=== HOUR 3: RESEARCH & DEBUGGING MASTERY');
+// // const arr = [1, 2, 3, 4, 5];
 
-/*
-Random Googling vs Strategic Research:
+// // const method1 = Math.max(arr[0], arr[1], arr[2], arr[3], arr[4]);
+// // console.log(method1);
 
-RANDOM GOOGLING (Beginner Approach):
-- Search only when completely stuck
-- Use vague search terms like "javascript array problem"
-- Copy-paste first solution found
-- Don't understand what the code does
-- Same problems happen repeatedly
+// // let method2 = arr[0];
+// // for (let i = 0; i < arr.length; i++) {
+// //     if (arr[i] > method2) {
+// //         method2 = arr[i]
+// //     }
+// // }
+// // console.log(method2);
 
-STRATEGIC RESEARCH (Professional Approach):
-- Research proactively to understand concepts
-- Use specific, targeted search terms
-- Evaluate multiple solutions
-- Understand solutions before implementing
-- Build knowledge for future problems
-*/
+// // const method3 = arr.reduce((max, current) => current > max ? current : max);
+// // console.log(method3);
 
-console.log(
-  'Goal: Master research and debugging like a professional developer'
-);
-console.log(
-  'Strategic research builds lasting knowledge, not just quick fixes'
-);
+// function demonstrateArrayMax(numbers) {
+//   const method1 = Math.max(...numbers);
 
-// Section 1: Professional Research Techniques
+//   let method2 = numbers[0];
+//   for (let i = 1; i < numbers.length; i++) {
+//     if (numbers[i] > method2) method2 = numbers[i];
+//   }
 
-// const arr = [1, 2, 3, 4, 5];
+//   const method3 = numbers.reduce((max, current) =>
+//     current > max ? current : max
+//   );
 
-// const method1 = Math.max(arr[0], arr[1], arr[2], arr[3], arr[4]);
-// console.log(method1);
-
-// let method2 = arr[0];
-// for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] > method2) {
-//         method2 = arr[i]
-//     }
+//   return { method1, method2, method3 };
 // }
-// console.log(method2);
 
-// const method3 = arr.reduce((max, current) => current > max ? current : max);
-// console.log(method3);
+// // Test our research with sample data
+// const testNumbers = [3, 7, 2, 9, 1, 5];
+// const maxResults = demonstrateArrayMax(testNumbers);
+// console.log('Multiple approaches from research:', maxResults);
 
-function demonstrateArrayMax(numbers) {
-  const method1 = Math.max(...numbers);
+// // STACK OVERFLOW RESEARCH RESULTS
+// function reverseStringMethods(str) {
+//   const method1 = str.split('').reverse().join('');
 
-  let method2 = numbers[0];
-  for (let i = 1; i < numbers.length; i++) {
-    if (numbers[i] > method2) method2 = numbers[i];
+//   let method2 = '';
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     method2 += str[i];
+//   }
+
+//   const method3 = [...str].reverse().join('');
+
+//   return { method1, method2, method3 };
+// }
+
+// const reverseResults = reverseStringMethods('hello');
+// console.log('Stack Overflow research results:', reverseResults);
+
+// // MDN DOCUMENTATION MASTERY
+// /*
+// MDN RESEARCH: Array.concat()
+// - Purpose: Merge two or more arrays
+// - Syntax: array1.concat(array2, array3, ..., arrayN)
+// - Returns: New array (doesn't modify originals)
+// - Key insight: Can concatenate multiple arrays at once!
+// */
+
+// function demonstrateConcat() {
+//   const array1 = [1, 2, 3];
+//   const array2 = [4, 5, 6];
+//   const array3 = [7, 8, 9];
+
+//   const simple = array1.concat(array2);
+//   const multiple = array1.concat(array2, array3);
+
+//   console.log('Original array1 unchanged:', array1);
+
+//   return { simple, multiple };
+// }
+
+// const concatResults = demonstrateConcat();
+// console.log('MDN documentation applied:', concatResults);
+
+// // SYSTEMATIC DEBUGGING METHODOLOGY
+// /*
+// 5-STEP DEBUGGING PROCESS:
+// 1. IDENTIFY - Recognize bug exists
+// 2. ISOLATE - Locate where bug happens
+// 3. INVESTIGATE - Understand why bug occurs
+// 4. FIX - Implement correction
+// 5. PREVENT - Add safeguards against similar bugs
+// */
+
+// // Buggy function for debugging practice
+// function calculateAverageScore(scores) {
+//   let total = 0;
+
+//   for (let i = 0; i < scores.length; i++) {
+//     total += scores[i];
+//   }
+
+//   return total / scores.length;
+// }
+
+// // Test the buggy function
+// const testScores = [85, 92, 78, 96, 88];
+// const buggyResult = calculateAverageScore(testScores);
+// console.log('Buggy result:', buggyResult);
+
+// // BROWSER DEVELOPER TOOLS MASTERY
+// function demonstrateConsoleDebugging(data) {
+//   console.group('Debugging Session');
+
+//   console.log('Input data:', data);
+
+//   if (typeof data !== 'object') {
+//     console.warn('Warning: Expected object, got', typeof data);
+//   }
+
+//   console.table(data);
+//   console.groupEnd();
+
+//   return Array.isArray(data) ? data.length : Object.keys(data).length;
+// }
+
+// const arrayData = [1, 2, 3, 4, 5];
+// const objectData = { name: 'John', age: 30, city: 'New York' };
+
+// demonstrateConsoleDebugging(arrayData);
+// demonstrateConsoleDebugging(objectData);
+
+// // DEBUGGER STATEMENT AND BREAKPOINTS
+// function stepThroughDebugging(numbers) {
+//   debugger;
+
+//   let sum = 0;
+//   let count = 0;
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     const currentNumber = numbers[i];
+
+//     console.log(`Processing index ${i}: value = ${currentNumber}`);
+
+//     if (typeof currentNumber === 'number') {
+//       sum += currentNumber;
+//       count++;
+//     } else {
+//       console.error(`Invalid number at index ${i}:`, currentNumber);
+//     }
+//   }
+
+//   const average = count > 0 ? sum / count : 0;
+//   console.log('Final results:', { sum, count, average });
+
+//   return average;
+// }
+
+// const mixedNumbers = [10, 20, 'error', 30, null, 40];
+// const debugResult = stepThroughDebugging(mixedNumbers);
+// console.log('Debug session result:', debugResult);
+
+// // SYSTEMATIC BUG FIXING APPLICATION
+// /*
+// DEBUGGING PROCESS APPLICATION:
+// STEP 1: IDENTIFY
+// - Bug: calculateAverageScore returns NaN or wrong value
+// - Expected: Average of [85, 92, 78, 96, 88] should be 87.8
+// - Actual: Getting NaN or incorrect value
+
+// STEP 2: ISOLATE
+// - Bug location: Inside calculateAverageScore function
+// - Specific issues: initialization, loop condition, division
+
+// STEP 3: INVESTIGATE
+// - total starts as undefined (undefined + number = NaN)
+// - Loop goes one iteration too far (accesses undefined)
+// - Division uses wrong denominator
+
+// STEP 4: FIX
+// - Initialize total to 0
+// - Change <= to < in loop condition
+// - Remove + 1 from division
+
+// STEP 5: PREVENT
+// - Add input validation
+// - Add type checking for array elements
+// */
+
+// function calculateAverageScoreFixed(scores) {
+//   if (!Array.isArray(scores) || scores.length === 0) {
+//     console.error('Invalid input: scores must be a non-empty array');
+//     return 0;
+//   }
+
+//   let total = 0;
+
+//   for (let i = 0; i < scores.length; i++) {
+//     if (typeof scores[i] === 'number') {
+//       total += scores[i];
+//     } else {
+//       console.warn(`Skipping non-number value at index ${i}:`, scores[i]);
+//     }
+//   }
+
+//   return total / scores.length;
+// }
+
+// const fixedResult = calculateAverageScoreFixed(testScores);
+// console.log('Fixed result:', fixedResult);
+
+// // Comprehensive debugging verification
+// console.group('Debugging Verification Tests');
+
+// // Test 1 - Normal case
+// const normalScores = [85, 92, 78, 96, 88];
+// const normalResult = calculateAverageScoreFixed(normalScores);
+// console.log('Normal case result:', normalResult);
+
+// // Test 2 - Edge case with invalid data
+// const mixedScores = [85, 'invalid', 92, null, 78];
+// const mixedResult = calculateAverageScoreFixed(mixedScores);
+// console.log('Mixed data result:', mixedResult);
+
+// // Test 3 - Error case with invalid input
+// const errorResult = calculateAverageScoreFixed('not an array');
+// console.log('Error case result:', errorResult);
+
+// // Test 4 - Edge case with empty array
+// const emptyResult = calculateAverageScoreFixed([]);
+// console.log('Empty array result:', emptyResult);
+
+// console.groupEnd();
+
+// console.log('Systematic debugging process successfully applied!');
+// console.log(
+//   'All bugs identified, isolated, investigated, fixed, and prevented'
+// );
+
+// Developer Skills Hour 4 - Advanced Problem-Solving & Real-World Challenges
+console.log('=== HOUR 4: ADVANCED PROBLEM-SOLVING MASTERY ===');
+
+// Main Challenge: Weather Forecast String Builder
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+function printForecast(arr) {
+  let str = '';
+
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}°C in ${i + 1} days... `;
   }
 
-  const method3 = numbers.reduce((max, current) =>
-    current > max ? current : max
+  console.log(' ...' + str);
+}
+
+printForecast(data1);
+printForecast(data2);
+
+console.log('Wather forcast formatter working correctly!');
+
+// Alternative Implementations
+// Alternative 1
+function printForecastMap(arr) {
+  const formatted = arr.map((temp, index) => `${temp}°C in ${index + 1} days`);
+  console.log('...' + formatted.join(' ... ') + '...');
+}
+
+printForecastMap(data1);
+printForecastMap(data2);
+
+// Alternative 2
+function printForecastReduce(arr) {
+  const result = arr.reduce(
+    (acc, temp, index) => acc + `${temp}°C in ${index + 1} days ... `,
+    '...'
   );
-
-  return { method1, method2, method3 };
+  console.log(result);
 }
 
-// Test our research with sample data
-const testNumbers = [3, 7, 2, 9, 1, 5];
-const maxResults = demonstrateArrayMax(testNumbers);
-console.log('Multiple approaches from research:', maxResults);
+printForecastReduce(data1);
+printForecastReduce(data2);
 
-// STACK OVERFLOW RESEARCH RESULTS
-function reverseStringMethods(str) {
-  const method1 = str.split('').reverse().join('');
+// Time-Pressured Challenge: Work Hours Analyzer
+function analyzeWorkWeek(dailyHours) {
+  const totalHours = dailyHours.reduce((sum, hours) => sum + hours, 0);
+  const averageHours = Math.round((totalHours / dailyHours.length) * 10) / 10;
 
-  let method2 = '';
-  for (let i = str.length - 1; i >= 0; i--) {
-    method2 += str[i];
+  const maxHours = Math.max(...dailyHours);
+  const maxDayIndex = dailyHours.indexOf(maxHours);
+  const days = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+  const maxDay = days[maxDayIndex];
+  const daysWorked = dailyHours.filter(hours => hours > 0).length;
+  const isFullTime = totalHours >= 35;
+
+  return {
+    totalHours,
+    averageHours,
+    maxDay,
+    daysWorked,
+    isFullTime,
+  };
+}
+
+const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 4, 0];
+const analysis = analyzeWorkWeek(weeklyHours);
+console.log('Work week analysis:', analysis);
+
+// Optimized Version
+function analyzeWorkWeekOptimized(dailyHours) {
+  if (!Array.isArray(dailyHours) || dailyHours.length !== 7) {
+    console.error('Invalid input: Expected array of 7 daily hours');
+    return null;
   }
 
-  const method3 = [...str].reverse().join('');
+  const totalHours = dailyHours.reduce((sum, hourse) => sum + hours, 0);
+  const averageHours = Math.round((totalHours / 7) * 10) / 10;
+  const maxHours = Math.max(...dailyHours);
+  const maxDayIndex = dailyHours.indexOf(maxHours);
+  const daysWorked = dailyHours.filter(hours => hours > 0).length;
 
-  return { method1, method2, method3 };
+  const dayNames = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+
+  return {
+    totalHours,
+    averageHours,
+    maxDay: dayNames[maxDayIndex],
+    daysWorked,
+    isFullTimes: totalHours >= 35,
+    workingDays: dailyHours
+      .map((hours, index) => (hours > 0 ? dayNames[index] : null))
+      .filter(day => day !== null),
+  };
 }
 
-const reverseResults = reverseStringMethods('hello');
-console.log('Stack Overflow research results:', reverseResults);
-
-// MDN DOCUMENTATION MASTERY
-/*
-MDN RESEARCH: Array.concat()
-- Purpose: Merge two or more arrays
-- Syntax: array1.concat(array2, array3, ..., arrayN)
-- Returns: New array (doesn't modify originals)
-- Key insight: Can concatenate multiple arrays at once!
-*/
-
-function demonstrateConcat() {
-  const array1 = [1, 2, 3];
-  const array2 = [4, 5, 6];
-  const array3 = [7, 8, 9];
-
-  const simple = array1.concat(array2);
-  const multiple = array1.concat(array2, array3);
-
-  console.log('Original array1 unchanged:', array1);
-
-  return { simple, multiple };
-}
-
-const concatResults = demonstrateConcat();
-console.log('MDN documentation applied:', concatResults);
-
-// SYSTEMATIC DEBUGGING METHODOLOGY
-/*
-5-STEP DEBUGGING PROCESS:
-1. IDENTIFY - Recognize bug exists
-2. ISOLATE - Locate where bug happens
-3. INVESTIGATE - Understand why bug occurs
-4. FIX - Implement correction
-5. PREVENT - Add safeguards against similar bugs
-*/
-
-// Buggy function for debugging practice
-function calculateAverageScore(scores) {
-  let total = 0;
-
-  for (let i = 0; i < scores.length; i++) {
-    total += scores[i];
-  }
-
-  return total / scores.length;
-}
-
-// Test the buggy function
-const testScores = [85, 92, 78, 96, 88];
-const buggyResult = calculateAverageScore(testScores);
-console.log('Buggy result:', buggyResult);
-
-// BROWSER DEVELOPER TOOLS MASTERY
-function demonstrateConsoleDebugging(data) {
-  console.group('Debugging Session');
-
-  console.log('Input data:', data);
-
-  if (typeof data !== 'object') {
-    console.warn('Warning: Expected object, got', typeof data);
-  }
-
-  console.table(data);
-  console.groupEnd();
-
-  return Array.isArray(data) ? data.length : Object.keys(data).length;
-}
-
-const arrayData = [1, 2, 3, 4, 5];
-const objectData = { name: 'John', age: 30, city: 'New York' };
-
-demonstrateConsoleDebugging(arrayData);
-demonstrateConsoleDebugging(objectData);
-
-// DEBUGGER STATEMENT AND BREAKPOINTS
-function stepThroughDebugging(numbers) {
-  debugger;
-
-  let sum = 0;
-  let count = 0;
-
-  for (let i = 0; i < numbers.length; i++) {
-    const currentNumber = numbers[i];
-
-    console.log(`Processing index ${i}: value = ${currentNumber}`);
-
-    if (typeof currentNumber === 'number') {
-      sum += currentNumber;
-      count++;
-    } else {
-      console.error(`Invalid number at index ${i}:`, currentNumber);
-    }
-  }
-
-  const average = count > 0 ? sum / count : 0;
-  console.log('Final results:', { sum, count, average });
-
-  return average;
-}
-
-const mixedNumbers = [10, 20, 'error', 30, null, 40];
-const debugResult = stepThroughDebugging(mixedNumbers);
-console.log('Debug session result:', debugResult);
-
-// SYSTEMATIC BUG FIXING APPLICATION
-/*
-DEBUGGING PROCESS APPLICATION:
-STEP 1: IDENTIFY 
-- Bug: calculateAverageScore returns NaN or wrong value
-- Expected: Average of [85, 92, 78, 96, 88] should be 87.8
-- Actual: Getting NaN or incorrect value
-
-STEP 2: ISOLATE 
-- Bug location: Inside calculateAverageScore function
-- Specific issues: initialization, loop condition, division
-
-STEP 3: INVESTIGATE 
-- total starts as undefined (undefined + number = NaN)
-- Loop goes one iteration too far (accesses undefined)
-- Division uses wrong denominator
-
-STEP 4: FIX 
-- Initialize total to 0
-- Change <= to < in loop condition
-- Remove + 1 from division
-
-STEP 5: PREVENT 
-- Add input validation
-- Add type checking for array elements
-*/
-
-function calculateAverageScoreFixed(scores) {
-  if (!Array.isArray(scores) || scores.length === 0) {
-    console.error('Invalid input: scores must be a non-empty array');
-    return 0;
-  }
-
-  let total = 0;
-
-  for (let i = 0; i < scores.length; i++) {
-    if (typeof scores[i] === 'number') {
-      total += scores[i];
-    } else {
-      console.warn(`Skipping non-number value at index ${i}:`, scores[i]);
-    }
-  }
-
-  return total / scores.length;
-}
-
-const fixedResult = calculateAverageScoreFixed(testScores);
-console.log('Fixed result:', fixedResult);
-
-// Comprehensive debugging verification
-console.group('Debugging Verification Tests');
-
-// Test 1 - Normal case
-const normalScores = [85, 92, 78, 96, 88];
-const normalResult = calculateAverageScoreFixed(normalScores);
-console.log('Normal case result:', normalResult);
-
-// Test 2 - Edge case with invalid data
-const mixedScores = [85, 'invalid', 92, null, 78];
-const mixedResult = calculateAverageScoreFixed(mixedScores);
-console.log('Mixed data result:', mixedResult);
-
-// Test 3 - Error case with invalid input
-const errorResult = calculateAverageScoreFixed('not an array');
-console.log('Error case result:', errorResult);
-
-// Test 4 - Edge case with empty array
-const emptyResult = calculateAverageScoreFixed([]);
-console.log('Empty array result:', emptyResult);
-
-console.groupEnd();
-
-console.log('Systematic debugging process successfully applied!');
-console.log(
-  'All bugs identified, isolated, investigated, fixed, and prevented'
-);
+const optimizedAnalysis = analyzeWorkWeekOptmized(weeklyHours);
+console.log('Optimized analysis:', optimizedAnalysis);
