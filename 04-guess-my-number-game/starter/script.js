@@ -57,11 +57,46 @@ document.querySelector('.check').addEventListener('click', function () {
     console.log('Correct guess!');
     document.querySelector('.message').textContent = '🎉 Correct Number!';
     document.querySelector('.number').textContent = secretNumber;
+
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
+    }
+
+    document.querySelector('.guess').disabled = true;
+    document.querySelector('.check').disabled = true;
   } else if (guess > secretNumber) {
     console.log('Too high!');
     document.querySelector('.message').textContent = 'Too high!!!';
+    score--;
+    document.querySelector('.score').textContent = score;
   } else if (guess < secretNumber) {
     console.log('Too low!');
     document.querySelector('.message').textContent = 'Too low!!!';
+    score--;
+    document.querySelector('.score').textContent = score;
   }
+
+  if (score < 1) {
+    document.querySelector('.message').textContent = 'You lost!';
+    document.querySelector('.number').textContent = secretNumber;
+    document.querySelector('.guess').disabled = true;
+    document.querySelector('.check').disabled = true;
+  }
+});
+
+document.querySelector('.again').addEventListener('click', function () {
+  console.log('Working!');
+  // To reset score & secretNumber
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  console.log('New secret number after reset', secretNumber);
+  // Reset UI Display
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.guess').value = '';
+
+  document.querySelector('.guess').disabled = false;
+  document.querySelector('.check').disabled = false;
 });
