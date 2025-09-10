@@ -628,7 +628,7 @@ function analyzeWorkWeekOptimized(dailyHours) {
     return null;
   }
 
-  const totalHours = dailyHours.reduce((sum, hourse) => sum + hours, 0);
+  const totalHours = dailyHours.reduce((sum, hours) => sum + hours, 0);
   const averageHours = Math.round((totalHours / 7) * 10) / 10;
   const maxHours = Math.max(...dailyHours);
   const maxDayIndex = dailyHours.indexOf(maxHours);
@@ -656,5 +656,49 @@ function analyzeWorkWeekOptimized(dailyHours) {
   };
 }
 
-const optimizedAnalysis = analyzeWorkWeekOptmized(weeklyHours);
+const optimizedAnalysis = analyzeWorkWeekOptimized(weeklyHours);
 console.log('Optimized analysis:', optimizedAnalysis);
+
+// Final Integration: Debug and Enhance Legacy Code
+function legacyForecastFunction(temperatures) {
+  var result = "";
+  for (var i = 1; i <= temperatures.length; i++) {
+    result = result+ temperatures[i] + " degrees in day " + i + ", ";
+  }
+  return result;
+}
+
+const testData = [15, 18, 22, 19];
+console.log("Buggy function output:", legacyForecastFunction(testData));
+
+// Complete Fixed and Enhanced Version
+function enhancedForecastFunction(temperatures, options = {}) {
+  if (!Array.isArray(temperatures) || temperatures.length === 0) {
+    console.error("Invalid input: temperatures must be a non-empty array");
+    return "";
+  }
+
+  const { unit = "°C", separator = "...", includeIndex = true } = options;
+  let result = "";
+
+  for (let i = 0; i < temperatures.length; i++) {
+    const dayNumber = includeIndex ? i + 1 : i;
+    result += `${temperatures[i]}${unit} in ${dayNumber} days${separator}`;
+  }
+
+  return separator + result.slice(0, -separator.length);
+}
+
+console.log("Enhanced function (default):", enhancedForecastFunction(testData));
+console.log(
+  "Enhanced function (custom):",
+  enhancedForecastFunction(testData, {
+    unit: "°F",
+    separator: " | ",
+    includeIndex: true,
+  })
+);
+
+console.log("Complete developer skills successfully applied!");
+console.log("Legacy code debugged, fixed, and enhanced systematically");
+
