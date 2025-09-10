@@ -53,6 +53,17 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess);
 
+  if (!guess) {
+    document.querySelector('.message').textContent = 'No number!';
+    return;
+  }
+
+  if (guess < 1 || guess > 20) {
+    document.querySelector('.message').textContent =
+      'Number must be between 1 and 20!';
+    return;
+  }
+
   if (guess === secretNumber) {
     console.log('Correct guess!');
     document.querySelector('.message').textContent = '🎉 Correct Number!';
@@ -65,16 +76,19 @@ document.querySelector('.check').addEventListener('click', function () {
 
     document.querySelector('.guess').disabled = true;
     document.querySelector('.check').disabled = true;
+    document.body.style.backgroundColor = 'green';
   } else if (guess > secretNumber) {
     console.log('Too high!');
     document.querySelector('.message').textContent = 'Too high!!!';
     score--;
     document.querySelector('.score').textContent = score;
+    document.body.style.backgroundColor = 'red';
   } else if (guess < secretNumber) {
     console.log('Too low!');
     document.querySelector('.message').textContent = 'Too low!!!';
     score--;
     document.querySelector('.score').textContent = score;
+    document.body.style.backgroundColor = 'red';
   }
 
   if (score < 1) {
@@ -99,4 +113,5 @@ document.querySelector('.again').addEventListener('click', function () {
 
   document.querySelector('.guess').disabled = false;
   document.querySelector('.check').disabled = false;
+  document.body.style.backgroundColor = '';
 });
