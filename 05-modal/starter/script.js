@@ -93,25 +93,25 @@ overlayEl.addEventListener('click', closeModal);
 console.log('=== MODAL DEVELOPMENT: KEYBOARD EVENTS & ADVANCED UX ===');
 console.log('Enhanced modal development ready!');
 
-// Let's start by understanding keyboard events
-console.log('Keyboard events test');
+// // Let's start by understanding keyboard events
+// console.log('Keyboard events test');
 
-// Add a basic keyboard event listener
-document.addEventListener('keydown', function (e) {
-  // Log the event object to see what we get
-  console.log('Key pressed:', e);
+// // Add a basic keyboard event listener
+// document.addEventListener('keydown', function (e) {
+//   // Log the event object to see what we get
+//   console.log('Key pressed:', e);
 
-  // Log just the key property
-  console.log('Key name:', e.key);
-});
+//   // Log just the key property
+//   console.log('Key name:', e.key);
+// });
 
-// Let's modify our event listener to be more specific
-document.addEventListener('keydown', function (e) {
-  // Only respond to ESC key
-  if (e.key === 'Escape') {
-    console.log('ESC key pressed!');
-  }
-});
+// // Let's modify our event listener to be more specific
+// document.addEventListener('keydown', function (e) {
+//   // Only respond to ESC key
+//   if (e.key === 'Escape') {
+//     console.log('ESC key pressed!');
+//   }
+// });
 
 // Add ESC key functionality to close the modal
 document.addEventListener('keydown', function (e) {
@@ -121,21 +121,21 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-// Let's add some debugging to see what's happening
-document.addEventListener('keydown', function (e) {
-  // Log what's happening for debugging
-  console.log(
-    'Key pressed:',
-    e.key,
-    'Modal visible:',
-    !modalEl.classList.contains('hidden')
-  );
+// // Let's add some debugging to see what's happening
+// document.addEventListener('keydown', function (e) {
+//   // Log what's happening for debugging
+//   console.log(
+//     'Key pressed:',
+//     e.key,
+//     'Modal visible:',
+//     !modalEl.classList.contains('hidden')
+//   );
 
-  // Check if ESC key was pressed AND modal is visible
-  if (e.key === 'Escape' && !modalEl.classList.contains('hidden')) {
-    closeModal();
-  }
-});
+//   // Check if ESC key was pressed AND modal is visible
+//   if (e.key === 'Escape' && !modalEl.classList.contains('hidden')) {
+//     closeModal();
+//   }
+// });
 
 // Add ARIA attributes for screen reader accessibility
 modalEl.setAttribute('role', 'dialog');
