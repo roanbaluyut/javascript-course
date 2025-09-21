@@ -50,18 +50,94 @@ const overlayEl = document.querySelector('.overlay');
 const btnCloseModalEl = document.querySelector('.close-modal');
 const btnsOpenModalEl = document.querySelectorAll('.show-modal');
 
-// Helper functions
+// // Helper functions
+// const openModal = function () {
+//   modalEl.classList.remove('hidden');
+//   overlayEl.classList.remove('hidden');
+// };
+
+// const closeModal = function () {
+//   modalEl.classList.add('hidden');
+//   overlayEl.classList.add('hidden');
+// };
+
+// Add focus management variables
+let lastFocusedButton = null;
+
+// Enhance openModal function with focus management
 const openModal = function () {
   modalEl.classList.remove('hidden');
   overlayEl.classList.remove('hidden');
+  // Move focus to the modal
+  modalEl.focus();
+  // Store which button opened the modal
+  lastFocusedButton = document.activeElement;
 };
 
+// Enhance closeModal function to restore focus
 const closeModal = function () {
   modalEl.classList.add('hidden');
   overlayEl.classList.add('hidden');
+  // Restore focus to the button that opened the modal
+  if (lastFocusedButton) {
+    lastFocusedButton.focus();
+  }
 };
 
 // Event listeners
 btnsOpenModalEl.forEach(btn => btn.addEventListener('click', openModal));
 btnCloseModalEl.addEventListener('click', closeModal);
 overlayEl.addEventListener('click', closeModal);
+
+// Modal Development Hour 2 - Keyboard Events & Advanced UX
+console.log('=== MODAL DEVELOPMENT: KEYBOARD EVENTS & ADVANCED UX ===');
+console.log('Enhanced modal development ready!');
+
+// Let's start by understanding keyboard events
+console.log('Keyboard events test');
+
+// Add a basic keyboard event listener
+document.addEventListener('keydown', function (e) {
+  // Log the event object to see what we get
+  console.log('Key pressed:', e);
+
+  // Log just the key property
+  console.log('Key name:', e.key);
+});
+
+// Let's modify our event listener to be more specific
+document.addEventListener('keydown', function (e) {
+  // Only respond to ESC key
+  if (e.key === 'Escape') {
+    console.log('ESC key pressed!');
+  }
+});
+
+// Add ESC key functionality to close the modal
+document.addEventListener('keydown', function (e) {
+  // Check if ESC key was pressed AND modal is visible
+  if (e.key === 'Escape' && !modalEl.classList.contains('hidden')) {
+    closeModal();
+  }
+});
+
+// Let's add some debugging to see what's happening
+document.addEventListener('keydown', function (e) {
+  // Log what's happening for debugging
+  console.log(
+    'Key pressed:',
+    e.key,
+    'Modal visible:',
+    !modalEl.classList.contains('hidden')
+  );
+
+  // Check if ESC key was pressed AND modal is visible
+  if (e.key === 'Escape' && !modalEl.classList.contains('hidden')) {
+    closeModal();
+  }
+});
+
+// Add ARIA attributes for screen reader accessibility
+modalEl.setAttribute('role', 'dialog');
+modalEl.setAttribute('aria-modal', 'true');
+btnCloseModalEl.setAttribute('aria-label', 'Close modal');
