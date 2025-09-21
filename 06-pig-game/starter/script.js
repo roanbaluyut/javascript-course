@@ -16,18 +16,43 @@ const current1El = document.getElementById('current--1');
 const diceEl = document.querySelector('.dice');
 const btnRoll = document.querySelector('.btn--roll');
 
-// Initialize game
+// // Initialize game
+// const init = function () {
+//   scores = [0, 0];
+//   currentScore = 0;
+//   activePlayer = 0;
+//   playing = true;
+
+//   score0El.textContent = 0;
+//   score1El.textContent = 0;
+//   current0El.textContent = 0;
+//   current1El.textContent = 0;
+//   diceEl.classList.add('hidden');
+// };
+// init();
+
+// Enhanced init function for complete game reset
 const init = function () {
+  // Reset game state
   scores = [0, 0];
   currentScore = 0;
   activePlayer = 0;
   playing = true;
 
+  // Reset all displays
   score0El.textContent = 0;
   score1El.textContent = 0;
   current0El.textContent = 0;
   current1El.textContent = 0;
+
+  // Hide dice
   diceEl.classList.add('hidden');
+
+  // Reset player styling
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
+  player0El.classList.add('player--active');
+  player1El.classList.remove('player--active');
 };
 init();
 
@@ -92,11 +117,11 @@ init();
 //   }
 // });
 
-// Test game state
-console.log('Scores:', scores);
-console.log('Current Score:', currentScore);
-console.log('Active Player:', activePlayer);
-console.log('Playing:', playing);
+// // Test game state
+// console.log('Scores:', scores);
+// console.log('Current Score:', currentScore);
+// console.log('Active Player:', activePlayer);
+// console.log('Playing:', playing);
 
 // Create switchPlayer function
 const switchPlayer = function () {
@@ -150,7 +175,43 @@ const btnHold = document.querySelector('.btn--hold');
 //   }
 // });
 
-// Enhanced hold functionality with proper validation
+// // Enhanced hold functionality with proper validation
+// btnHold.addEventListener('click', function () {
+//   if (playing && currentScore > 0) {
+//     // Add current score to active player's score
+//     scores[activePlayer] += currentScore;
+//     document.getElementById(`score--${activePlayer}`).textContent =
+//       scores[activePlayer];
+
+//     // Switch to next player
+//     switchPlayer();
+//   }
+// });
+
+// // Add this test code to verify everything works
+// console.log('Scores array:', scores);
+// console.log('Current score:', currentScore);
+// console.log('Active player:', activePlayer);
+
+// // Test the visual indicators
+// console.log(
+//   'Player 0 has active class:',
+//   player0El.classList.contains('player--active')
+// );
+// console.log(
+//   'Player 1 has active class:',
+//   player1El.classList.contains('player--active')
+// );
+
+// // Test complete game state
+// console.log('Scores:', scores);
+// console.log('Current Score:', currentScore);
+// console.log('Active Player:', activePlayer);
+// console.log('Playing:', playing);
+// console.log('Player 0 active:', player0El.classList.contains('player--active'));
+// console.log('Player 1 active:', player1El.classList.contains('player--active'));
+
+// Enhanced hold functionality with win condition and validation
 btnHold.addEventListener('click', function () {
   if (playing && currentScore > 0) {
     // Add current score to active player's score
@@ -158,22 +219,50 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    // Switch to next player
-    switchPlayer();
+    // Check for win condition
+    if (scores[activePlayer] >= 100) {
+      // Player wins!
+      playing = false;
+      diceEl.classList.add('hidden');
+
+      // Add winner styling
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+
+      // Remove active class from winner
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player--active');
+    } else {
+      // Switch to next player
+      switchPlayer();
+    }
   }
 });
 
-// Add this test code to verify everything works
-console.log('Scores array:', scores);
-console.log('Current score:', currentScore);
-console.log('Active player:', activePlayer);
+// // Add this test code to verify win condition works
+// console.log('Current scores:', scores);
+// console.log('Win condition met:', scores[activePlayer] >= 100);
+// console.log('Game playing:', playing);
 
-// Test the visual indicators
-console.log(
-  'Player 0 has active class:',
-  player0El.classList.contains('player--active')
-);
-console.log(
-  'Player 1 has active class:',
-  player1El.classList.contains('player--active')
-);
+// Select the new game button
+const btnNew = document.querySelector('.btn--new');
+
+// New game functionality
+btnNew.addEventListener('click', init);
+
+// // Test complete game reset
+// console.log('Game reset - scores:', scores);
+// console.log('Game reset - playing:', playing);
+// console.log('Game reset - active player:', activePlayer);
+
+// Test complete game state
+console.log('Scores:', scores);
+console.log('Current Score:', currentScore);
+console.log('Active Player:', activePlayer);
+console.log('Playing:', playing);
+console.log('Player 0 winner:', player0El.classList.contains('player--winner'));
+console.log('Player 1 winner:', player1El.classList.contains('player--winner'));
+console.log('Player 0 active:', player0El.classList.contains('player--active'));
+console.log('Player 1 active:', player1El.classList.contains('player--active'));
