@@ -410,3 +410,24 @@ originalUser.name = 'Modified';
 
 console.log('Original changed:', originalUser);
 console.log('Stored user:', userManager.getUsers()[0]);
+
+// 1. Hoisting and TDZ (Hour 1)
+// Without strict mode: undeclaredVar = 'This would create a global variable!';
+// With strict mode: throws ReferenceError
+// undeclaredVar = 'This throws an error in strict mode';
+
+// 2. This keyword (Hour 2)
+function demonstrateThis() {
+  console.log('this in strict mode:', this); // undefined (not global object)
+}
+demonstrateThis();
+
+// 3. Object mutation prevention attempts
+const readOnlyObj = Object.freeze({ name: 'Frozen' });
+
+try {
+  readOnlyObj.name = 'Changed'; // Throws error in strict mode
+  console.log('Mutation succeeded');
+} catch (error) {
+  console.log('Strict mode caught error:', error.message);
+}
